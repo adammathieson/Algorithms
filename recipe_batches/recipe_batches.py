@@ -3,25 +3,40 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  needed = []
-  on_hand = []
   batches = []
   for r in recipe.items():
-    needed.append(r[0])
     for i in ingredients.items():
       if r[0] == i[0]:
-        on_hand.append(r[0])
         batches.append(i[1]//r[1])
 
-  if needed != on_hand:
+  if len(recipe) != len(batches):
     return 0
   else:
     for i in batches:
       if i == 0:
-        return "No"
+        return 0
       else:
         batches.sort()
         return batches[0]
+  # needed = []
+  # on_hand = []
+  # batches = []
+  # for r in recipe.items():
+  #   needed.append(r[0])
+  #   for i in ingredients.items():
+  #     if r[0] == i[0]:
+  #       on_hand.append(r[0])
+  #       batches.append(i[1]//r[1])
+
+  # if needed != on_hand:
+  #   return 0
+  # else:
+  #   for i in batches:
+  #     if i == 0:
+  #       return "No"
+  #     else:
+  #       batches.sort()
+  #       return batches[0]
 
       
 
