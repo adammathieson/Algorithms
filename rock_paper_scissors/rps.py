@@ -2,13 +2,23 @@
 
 import sys
 
+def add_round(arr):
+ 
+  choice = ['rock', 'paper', 'scissors']
+
+
+  return arr
+
+
 def rock_paper_scissors(n):
-  pass 
+  plays = []
+  round = n
 
+  while round > 0:
+    add_round(plays)
+    print(round)
+    round -= 1
+      
+  return plays
 
-if __name__ == "__main__":
-  if len(sys.argv) > 1:
-    num_plays = int(sys.argv[1])
-    print(rock_paper_scissors(num_plays))
-  else:
-    print('Usage: rps.py [num_plays]')
+print(rock_paper_scissors(2))
